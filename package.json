@@ -1,0 +1,32 @@
+{
+  "name": "sql-comment-block-grammar-injection",
+  "displayName": "Comment code block grammar injection in sql file",
+  "description": "",
+  "version": "0.0.1",
+  "publisher": "chirkin",
+  "license": "MIT",
+  "repository": {
+    "url": "https://github.com/chirkin/vscode-sql-comment-code-block-injection.git"
+  },
+  "bugs": {
+    "url": "https://github.com/chirkin/vscode-sql-comment-code-block-injection/issues"
+  },
+  "engines": {
+    "vscode": "^1.7.0"
+  },
+  "categories": [
+    "Other"
+  ],
+  "contributes": {
+    "grammars": [
+      {
+        "path": "./syntaxes/commentblock.json",
+        "scopeName": "sql.comment.block",
+        "injectTo": [
+          "source.sql"
+        ]
+      }
+    ]
+  },
+  "dependencies": {  }
+}

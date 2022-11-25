@@ -1,0 +1,105 @@
+{
+  "scopeName": "sql.comment.block",
+  "injectionSelector": "L:source.sql",
+  "patterns": [
+    {
+      "include": "#sql-comment-block"
+    }
+  ],
+  "repository": {
+    "sql-comment-block": {
+      "name": "test",
+      "patterns": [
+        {
+          "patterns": [
+            {
+              "include": "source.yaml"
+            }
+          ],
+          "begin": "(\\/\\*{1,})\\s*(yaml)\\s*$",
+          "end": "(\\*\\/)$",
+          "beginCaptures": {
+            "1": {
+              "name": "punctuation.definition.comment"
+            },
+            "2": {
+              "name": "punctuation.definition.comment"
+            }
+          },
+          "endCaptures": {
+            "1": {
+              "name": "punctuation.definition.comment"
+            }
+          }
+        },
+        {
+          "patterns": [
+            {
+              "include": "source.json"
+            }
+          ],
+          "begin": "(\\/\\*{1,})\\s*(json)\\s*$",
+          "end": "(\\*\\/)$",
+          "beginCaptures": {
+            "1": {
+              "name": "punctuation.definition.comment"
+            },
+            "2": {
+              "name": "punctuation.definition.comment"
+            }
+          },
+          "endCaptures": {
+            "1": {
+              "name": "punctuation.definition.comment"
+            }
+          }
+        },
+        {
+          "patterns": [
+            {
+              "include": "text.html.derivative"
+            }
+          ],
+          "begin": "(\\/\\*{1,})\\s*(html)\\s*$",
+          "end": "(\\*\\/)$",
+          "beginCaptures": {
+            "1": {
+              "name": "punctuation.definition.comment"
+            },
+            "2": {
+              "name": "punctuation.definition.comment"
+            }
+          },
+          "endCaptures": {
+            "1": {
+              "name": "punctuation.definition.comment"
+            }
+          }
+        },
+        {
+          "patterns": [
+            {
+              "include": "text.html.markdown"
+            }
+          ],
+          "begin": "(\\/\\*{1,})\\s*(markdown)\\s*$",
+          "end": "(\\*\\/)$",
+          "beginCaptures": {
+            "1": {
+              "name": "punctuation.definition.comment"
+            },
+            "2": {
+              "name": "punctuation.definition.comment"
+            }
+          },
+          "endCaptures": {
+            "1": {
+              "name": "punctuation.definition.comment"
+            }
+          }
+        }
+      ]
+    }
+
+  }
+}
